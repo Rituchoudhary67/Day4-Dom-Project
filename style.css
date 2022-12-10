@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: pink;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button, .para {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    font-size: larger;
+    cursor: pointer;
+}
+.container, .change-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.para {
+    background-color: white;
+    color: black;
+    width: 100px;
+}
+.change-btn {
+   width: 200px;
+}
+.toast-message {
+    position: fixed;
+    z-index: 999;
+    top: 2rem;
+    right: 2rem;
+    background-color: rgb(19,201,110);
+    color: black;
+    border: 1px solid white;
+    border-radius: 0.25rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+.toast-message-side-in {
+    animation: toast-animation-in 0.5s ease-in;
+}
+.toast-message-side-out {
+    animation: toast-animation-out 0.5s ease-in;
+}
+
+@keyframes toast-message-side-in {
+    from {
+        transform: translate(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+@keyframes toast-message-side-out {
+    from {
+        transform: translate(0px);
+        opacity: 1;
+    }
+    to {
+        transform: translate(200px);
+        opacity: 0;
+    }
+}
